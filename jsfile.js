@@ -67,12 +67,18 @@ function mm() {
 
 
         console.log(tt1, tt2, tt3, kolzap, cena, summa);
-
-
+        if (kolzap > 0) {
+            $("#content").html(lll(tt1, tt2, tt3, summa));
+        }
+        
     });
-    
+
     $("#button-reset").click(function () {
         i = 1;
         mm();
     });
 };
+
+function lll(tt1, tt2, tt3, summa) {
+    return tt1 + ' ' + tt2 + ' ' + tt3 + '. Пожертвование на сумму:' + summa + ' рублей';
+}
