@@ -1,8 +1,10 @@
 /**
  * Created by Kuzjma on 05.12.2016.
  */
+var forma = '<form><div class="form-group text-center"><div class="btn-group" data-toggle="buttons"><label class="btn btn-default active btn-lg"> <input type="radio" name="options" id="option1" checked> О здравии </label><label class="btn btn-default btn-lg"><input type="radio" name="options" id="option2"> О упокоении</label></div></div><div class="form-group"><input type="text" class="form-control input-lg" placeholder="Введите имя"></div><div class="form-group text-right"><button class="btn btn-danger btn-sm" type="button"> Добавить еще одно имя <span class="glyphicon glyphicon-plus"></span></button></div><div class="form-group"><label for="fc">Укажите срок:</label><select class="form-control input-sm" id="fc"><option>Сорокоуст (40 дней)</option><option>На полгода (6 мес.)</option><option>На один год (12 мес)</option></select></div><div class="form-grou text-center"><button class="btn btn-primary btn-lg btn-block" type="button">Рассчитать пожертвование</button></div></form>';
+
 $(document).ready(function(){
 
-    $("#content").html('Lrem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam commodi dolorem eaque esse facere fugiat harum, iusto maiores maxime obcaecati odit quas repellat veniam! Ad architecto autem eaque eligendi error ex minus quibusdam sint sunt tenetur. Enim possimus quas repellendus sapiente sint voluptate! Accusantium dolorum error est fuga impedit mollitia neque sed. Accusantium amet aperiam at beatae corporis dolore doloremque dolorum ea earum eos error fugit hic id minima necessitatibus neque nulla pariatur quae quam quibusdam, quisquam quos ratione reiciendis rem repudiandae rerum temporibus! Accusantium amet dignissimos eaque eum eveniet inventore laboriosam laborum laudantium magnam magni, maiores repellat sint vero.');
+    $("#content").html(forma);
 
 });
