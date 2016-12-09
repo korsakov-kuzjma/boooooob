@@ -69,6 +69,10 @@ function mm() {
         console.log(tt1, tt2, tt3, kolzap, cena, summa);
         if (kolzap > 0) {
             $("#content").html(lll(tt1, tt2, tt3, summa));
+            $("#button-over").click(function () {
+                i = 1;
+                mm();
+            });
         }
         
     });
@@ -80,7 +84,7 @@ function mm() {
 };
 
 function lll(tt1, tt2, tt3, summa) {
-    var otv = tt3 + ' ' + tt1 + ' ' + tt2 + '. Пожертвование на сумму: ' + summa + ' рублей';
+    var otv = '<div class="form-group text-left well"><p><strong>Проверьте корректность введенных данных:</strong></p><p>' + tt3 + ' ' + tt1 + ' ' + tt2 + '. Пожертвование на сумму: ' + summa + ' рублей</p><div class="form-group text-center"><button class="btn btn-warning" type="button" id="button-over">Изменить данные</button></div></div>';
     var otv1 = '<form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml"> '+
        ' <input type="hidden" name="receiver" value="410012561722752">'+
       '  <input type="hidden" name="formcomment" value="Свято-Троицкий монастырь: пожертвование">'+
@@ -99,8 +103,8 @@ function lll(tt1, tt2, tt3, summa) {
        ' <input type="hidden" name="need-address" value="false">'+
 
             '<div class="form-group text-center"><div class="btn-group" data-toggle="buttons">' +
-       ' <label class="btn btn-default active btn-lg"><input type="radio" name="paymentType" value="PC" checked>Яндекс.Деньгами</label>'+
-       ' <label class="btn btn-default btn-lg"><input type="radio" name="paymentType" value="AC">Банковской картой</label>'+
+       ' <label class="btn btn-default btn-lg"><input type="radio" name="paymentType" value="PC">Яндекс.Деньгами</label>'+
+       ' <label class="btn btn-default active btn-lg"><input type="radio" name="paymentType" value="AC" checked>Банковской картой</label>'+
             '</div></div>' +
    ' <div class="form-group text-center"><input class="btn btn-primary btn-lg btn-block" type="submit" value="Перевести"></div>'+
        ' </form>'
