@@ -83,11 +83,12 @@ function lll(tt1, tt2, tt3, summa) {
     var otv = tt3 + ' ' + tt1 + ' ' + tt2 + '. Пожертвование на сумму: ' + summa + ' рублей';
     var otv1 = '<form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml"> '+
        ' <input type="hidden" name="receiver" value="410012561722752">'+
-      '  <input type="hidden" name="formcomment" value="Пожертвование Свято-Троицкому монастырю">'+
+      '  <input type="hidden" name="formcomment" value="Свято-Троицкий монастырь: пожертвование">'+
        ' <input type="hidden" name="short-dest" value="Пожертвование Свято-Троицкому монастырю">'+
       ' <input type="hidden" name="label" value=".">'+
        ' <input type="hidden" name="quickpay-form" value="donate">'+
-       ' <input type="hidden" name="targets" value="Пожертвование Свято-Троицкому монастырю">'+
+       ' <input type="hidden" name="targets" value="' + tt3 + ' ' + tt1 + ' ' + tt2 +
+        '">'+
         '<input type="hidden" name="sum" value="' + summa +
         '" data-type="number">'+
        ' <input type="hidden" name="comment" value="' + tt3 + ' ' + tt1 + ' ' + tt2 + 
