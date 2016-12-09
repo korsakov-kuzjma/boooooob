@@ -80,5 +80,28 @@ function mm() {
 };
 
 function lll(tt1, tt2, tt3, summa) {
-    return tt1 + ' ' + tt2 + ' ' + tt3 + '. Пожертвование на сумму:' + summa + ' рублей';
+    var otv = tt3 + ' ' + tt1 + ' ' + tt2 + '. Пожертвование на сумму: ' + summa + ' рублей';
+    var otv1 = '<form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml"> '+
+       ' <input type="hidden" name="receiver" value="410012561722752">'+
+      '  <input type="hidden" name="formcomment" value="Пожертвование Свято-Троицкому монастырю">'+
+       ' <input type="hidden" name="short-dest" value="Пожертвование Свято-Троицкому монастырю">'+
+      ' <input type="hidden" name="label" value=".">'+
+       ' <input type="hidden" name="quickpay-form" value="donate">'+
+       ' <input type="hidden" name="targets" value="Пожертвование Свято-Троицкому монастырю">'+
+        '<input type="hidden" name="sum" value="' + summa +
+        '" data-type="number">'+
+       ' <input type="hidden" name="comment" value="' + tt3 + ' ' + tt1 + ' ' + tt2 + 
+    '">'+
+       ' <input type="hidden" name="need-fio" value="false">'+
+       ' <input type="hidden" name="need-email" value="false">'+
+       ' <input type="hidden" name="need-phone" value="false">'+
+       ' <input type="hidden" name="need-address" value="false">'+
+
+            '<div class="form-group text-center"><div class="btn-group" data-toggle="buttons">' +
+       ' <label class="btn btn-default active btn-lg"><input type="radio" name="paymentType" value="PC" checked>Яндекс.Деньгами</label>'+
+       ' <label class="btn btn-default btn-lg"><input type="radio" name="paymentType" value="AC">Банковской картой</label>'+
+            '</div></div>' +
+   ' <div class="form-group text-center"><input type="submit" value="Перевести"></div>'+
+       ' </form>'
+    return otv + ' ' + otv1;
 }
