@@ -101,7 +101,7 @@ function lll(tt1, tt2, tt3, summa) {
        ' <label class="btn btn-default active btn-lg"><input type="radio" name="paymentType" value="PC" checked>Яндекс.Деньгами</label>'+
        ' <label class="btn btn-default btn-lg"><input type="radio" name="paymentType" value="AC">Банковской картой</label>'+
             '</div></div>' +
-   ' <div class="form-group text-center"><input type="submit" value="Перевести"></div>'+
+   ' <div class="form-group text-center"><input class="btn btn-primary btn-lg btn-block" type="submit" value="Перевести"></div>'+
        ' </form>'
     return otv + ' ' + otv1;
 }
