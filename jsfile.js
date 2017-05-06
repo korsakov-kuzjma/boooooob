@@ -90,7 +90,7 @@ function lll(tt1, tt2, tt3, summa) {
       '  <input type="hidden" name="formcomment" value="Свято-Троицкий монастырь: пожертвование">'+
        ' <input type="hidden" name="short-dest" value="Пожертвование Свято-Троицкому монастырю">'+
       ' <input type="hidden" name="label" value=".">'+
-        ' <input type="hidden" name="successURL" value="https://vk.com/selengmon">'+
+        ' <input type="hidden" name="successURL" value="http://antidor.ru">'+
 
        ' <input type="hidden" name="quickpay-form" value="donate">'+
        ' <input type="hidden" name="targets" value="' + tt3 + ' ' + tt1 + ' ' + tt2 +
